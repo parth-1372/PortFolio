@@ -3,10 +3,12 @@ import { Container, Row, Col } from "react-bootstrap";
 import ScrollToTop from "../ScrollToTop/ScrollToTop";
 import ProjectCard from "./ProjectCards";
 
-import PrivateChat from "../../Assets/Projects/PrivateChat.png";
-import Portfolio from "../../Assets/Projects/Portfolio.png";
-import Ecart from "../../Assets/Projects/ecart.png";
-import ExpenseTracker from "../../Assets/Projects/ExpenseTracker.png";
+// Images for the projects
+import BlogSphere from "../../Assets/Projects/BlogSphere.png";
+import PowerBuy from "../../Assets/Projects/PowerBuy.png"; 
+import Quizz from "../../Assets/Projects/Quizz.png"; 
+import ZodiacColor from "../../Assets/Projects/ZodiacColor.png";  // Add the image path for the new project
+import ToDoList from "../../Assets/Projects/ToDoList.png";  // Add the image path for the new project
 
 import "./project.css";
 
@@ -15,48 +17,61 @@ function Projects() {
     <Container fluid className="project-section">
       <Container>
         <h1 className="project-heading">
-          My Recent <strong className="Fluorescent-Blue">Works </strong>
+          My Recent <strong className="Fluorescent-Blue">Works</strong>
         </h1>
         <p>Here are a few projects I've worked on recently.</p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
+          
           <Col md={6} lg={4} className="project-card">
             <ProjectCard
-              imgPath={Ecart}
-              title="E Cart"
-              description="This is a fully functional eCommerce website that uses React.js + MUI and CSS in the front end and NodeJs and express js in backend and MongoDb as Database."
-              ghLink="https://github.com/rahuljha4171/E-cart"
-              demoLink="https://ecart.onrender.com/"
+              imgPath={BlogSphere}
+              title="BlogSphere"
+              description="A blogging website built with Node.js, EJS, and MongoDB. It allows users to create blogs, comment, and authenticate securely."
+              ghLink="https://github.com/parth-1372/BlogSphere"
+              demoLink="http://blogsphere-env-2.eba-3csmpqj8.ap-south-1.elasticbeanstalk.com/"
             />
           </Col>
 
           <Col md={6} lg={4} className="project-card">
             <ProjectCard
-              imgPath={Portfolio}
-              title="Portfolio Website"
-              description="My personal Portfolio Website build with React and Bootstrap. It is fully responsive website which supports both dark and light mode."
-              ghLink="https://github.com/rahuljha4171/Portfolio-Website"
-              demoLink="https://rahuljha.info/"
-            />
-          </Col>
-          <Col md={6} lg={4} className="project-card">
-            <ProjectCard
-              imgPath={PrivateChat}
-              title="Private Chat"
-              description="A Personal Chat Application to share resources and hangout with friends build with react.js, css, and Firebase. Have features which allows user for realtime messaging, image sharing and search user."
-              ghLink="#"
-              demoLink="https://chat-app-rahuljha4171.vercel.app/"
+              imgPath={PowerBuy}
+              title="PowerBuy"
+              description="An e-commerce platform built with JavaScript and Tailwind CSS, featuring a dynamic shopping cart and responsive design."
+              ghLink="https://github.com/parth-1372/E-Commerce"
+              demoLink="https://e-commerce-seven-rose-24.vercel.app/"
             />
           </Col>
 
           <Col md={6} lg={4} className="project-card">
             <ProjectCard
-              imgPath={ExpenseTracker}
-              title="Expense Tracker"
-              description="An online expense tracker using React, Node, Express, and MongoDB as the database. It allows you to keep track of your expenses, investments, and savings. All past transactions are listed, and you can also delete them. "
-              ghLink="https://github.com/rahuljha4171/Expense-Tracker"
-              demoLink="https://expense-tracker.rahuljha4171.vercel.app/"
+              imgPath={Quizz}
+              title="Quizz"
+              description="A quiz website built with JavaScript and Tailwind CSS, featuring customizable quizzes and dynamic API integration."
+              ghLink="https://quizyyparth.netlify.app/"
+              demoLink="https://quizyyparth.netlify.app/"
             />
           </Col>
+
+          <Col md={6} lg={4} className="project-card">
+            <ProjectCard
+              imgPath={ZodiacColor}
+              title="Get Lucky Zodiac Color"
+              description="A fun project that generates a random color after selecting your zodiac sign."
+              ghLink="https://github.com/parth-1372/Javascript/tree/master/zodic%20color"
+              demoLink="https://getluckycolour.vercel.app/"
+            />
+          </Col>
+
+          <Col md={6} lg={4} className="project-card">
+            <ProjectCard
+              imgPath={ToDoList}
+              title="To-Do List"
+              description="A simple to-do list application where you can add tasks, delete todos, and keep track of your daily tasks."
+              ghLink="https://github.com/parth-1372/Javascript/tree/master/ToDo%20List"
+              demoLink="https://todoapp-nine-vert.vercel.app/"
+            />
+          </Col>
+
         </Row>
       </Container>
       <ScrollToTop />

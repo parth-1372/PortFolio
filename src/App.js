@@ -5,12 +5,12 @@ import Home from "./components/Home/Home";
 import About from "./components/About/About";
 import Projects from "./components/Projects/Projects";
 import Footer from "./components/footer/Footer";
+import Skills from "./components/Skills/Skill"
 import { ThemeContext } from "./Context/theme";
 import {
   BrowserRouter as Router,
   Route,
   Routes,
-  Navigate,
 } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 import "./App.css";
@@ -39,7 +39,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/project" element={<Projects />} />
             <Route path="/about" element={<About />} />
-            <Route path="*" element={<Navigate to="/" />} />
+            <Route path="/skills" element={<Skills />} />
           </Routes>
           <Footer />
         </div>

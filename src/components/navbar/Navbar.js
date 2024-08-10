@@ -80,7 +80,7 @@ function NavBar() {
                 to="/about"
                 onClick={() => updateExpanded(false)}
               >
-                About
+                About Me
               </Nav.Link>
             </Nav.Item>
 
@@ -94,12 +94,12 @@ function NavBar() {
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link
-                href="https://blog.rahuljha.info/"
-                target="_blank"
-                rel="noreferrer"
+            <Nav.Link
+                as={Link}
+                to="/skills"
+                onClick={() => updateExpanded(false)}
               >
-                Blogs
+                Skills
               </Nav.Link>
             </Nav.Item>
           </Nav>

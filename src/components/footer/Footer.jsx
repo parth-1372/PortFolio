@@ -2,7 +2,6 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import {
   AiFillGithub,
-  AiOutlineTwitter,
   AiFillInstagram,
   AiOutlineMail,
 } from "react-icons/ai";
@@ -17,72 +16,56 @@ function Footer() {
         <Col md="4" className="footer-copywright">
           <span>
             Designed and Developed by{" "}
-            <i className="primary-header">Rahul Jha</i>
+            <i className="primary-header">Parth Mungra</i>
           </span>
         </Col>
         <Col md="4" className="footer-body">
-          <ul className="footer-icons">
-            <li className="social-icons">
-              <a
-                style={{ color: `var(--clr-primary)` }}
-                className="github"
-                href="https://github.com/Rahuljha4171"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="github"
-              >
-                <AiFillGithub />
-              </a>
-            </li>
-            <li className="social-icons">
-              <a
-                style={{ color: `var(--clr-primary)` }}
-                className="twitter"
-                href="https://twitter.com/kumardotexe"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="twitter"
-              >
-                <AiOutlineTwitter />
-              </a>
-            </li>
-            <li className="social-icons">
-              <a
-                style={{ color: `var(--clr-primary)` }}
-                className="email"
-                href="mailto:rahul.workmail01@gmail.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="email"
-              >
-                <AiOutlineMail />
-              </a>
-            </li>
-            <li className="social-icons">
-              <a
-                style={{ color: `var(--clr-primary)` }}
-                className="linkedin"
-                href="https://www.linkedin.com/in/Rahuljha4171/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="linkedin"
-              >
-                <FaLinkedinIn />
-              </a>
-            </li>
-            <li className="social-icons">
-              <a
-                style={{ color: `var(--clr-primary)` }}
-                className="instagram"
-                href="https://www.instagram.com/dead.programmer/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="instagram"
-              >
-                <AiFillInstagram />
-              </a>
-            </li>
-          </ul>
+        <ul className="home-about-social-links" data-aos="fade-up">
+          <li className="social-icons">
+            <a
+              href="https://github.com/parth-1372"
+              target="_blank"
+              rel="noreferrer"
+              className="icon-colour home-social-icons"
+              aria-label="github"
+            >
+              <AiFillGithub />
+            </a>
+          </li>
+          <li className="social-icons">
+            <a
+              href="mailto:parthmungra1372@gmail.com"
+              target="_blank"
+              rel="noreferrer"
+              className="icon-colour home-social-icons"
+              aria-label="email"
+            >
+              <AiOutlineMail />
+            </a>
+          </li>
+          <li className="social-icons">
+            <a
+              href="https://www.linkedin.com/in/parth-mungra"
+              target="_blank"
+              rel="noreferrer"
+              className="icon-colour home-social-icons"
+              aria-label="linkedin"
+            >
+              <FaLinkedinIn />
+            </a>
+          </li>
+          <li className="social-icons">
+            <a
+              href="https://www.instagram.com/parth_patel137/"
+              target="_blank"
+              rel="noreferrer"
+              className="icon-colour home-social-icons"
+              aria-label="instagram"
+            >
+              <AiFillInstagram />
+            </a>
+          </li>
+        </ul>
         </Col>
       </Row>
     </Container>

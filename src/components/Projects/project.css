@@ -89,3 +89,9 @@
   font-weight: 500 !important;
   padding-top: 10px !important;
 }
+.project-card-view img {
+  width: 100%;
+  height: auto;
+}
+
+

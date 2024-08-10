@@ -1,10 +1,7 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import Github from "./Github";
-import Techstack from "./Techstack";
-import Aboutcard from "./AboutCard";
+import AboutCard from "./AboutCard";
 import laptopImg from "../../Assets/about.png";
-import Toolstack from "./Toolstack";
 import ScrollToTop from "../ScrollToTop/ScrollToTop";
 
 import "./about.css";
@@ -29,7 +26,7 @@ function About() {
               <span className="primary-header">Who</span> I'M
             </h1>
             <div data-aos="fade-up">
-              <Aboutcard />
+              <AboutCard />
             </div>
           </Col>
           <Col
@@ -45,22 +42,6 @@ function About() {
             />
           </Col>
         </Row>
-        <h1 data-aos="fade-right">
-          <span className="primary-header">Skillset</span> I Work With
-        </h1>
-
-        <div data-aos="fade-up">
-          <Techstack />
-        </div>
-
-        <h1 data-aos="fade-right">
-          <span className="primary-header">Tools</span> I use
-        </h1>
-        <div data-aos="fade-up">
-          <Toolstack data-aos="fade-up" />
-        </div>
-
-        <Github />
       </Container>
       <ScrollToTop />
     </Container>

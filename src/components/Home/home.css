@@ -221,3 +221,16 @@
 .icon-colour {
   color: var(--clr-primary) !important;
 }
+
+.resume-btn {
+  background-color: #007bff; /* Primary color, adjust as needed */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.resume-btn:hover {
+  background-color: #0056b3; /* Darker shade for hover */
+}

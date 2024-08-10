@@ -1,11 +1,10 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Button } from "react-bootstrap";
 import homeIcon from "../../Assets/homeicons.svg";
 import ScrollToTop from "../ScrollToTop/ScrollToTop";
-
-import Home2 from "./Home2";
 import Type from "./Type";
 import "./home.css";
+import resumeFile from "../../Assets/Parth_Resume.pdf"; // Adjust the path to your resume file
 
 function Home() {
   return (
@@ -23,12 +22,23 @@ function Home() {
               </h1>
 
               <h1 className="heading-name">
-                <strong className="main-name"> Rahul Jha</strong>
+                <strong className="main-name">Parth Mungra</strong>
               </h1>
 
               <div style={{ padding: 30 }} className="type">
                 <Type />
               </div>
+
+              {/* Resume Download Button */}
+              <Button 
+                variant="primary" 
+                href={resumeFile} 
+                download 
+                className="resume-btn"
+                style={{ marginTop: "20px" }}
+              >
+                Download My Resume
+              </Button>
             </Col>
 
             <Col md={5} style={{ paddingBottom: 20 }}>
@@ -42,7 +52,6 @@ function Home() {
           </Row>
         </Container>
       </Container>
-      <Home2 />
       <ScrollToTop />
     </section>
   );
