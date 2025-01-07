@@ -4,6 +4,7 @@ import ScrollToTop from "../ScrollToTop/ScrollToTop";
 import ProjectCard from "./ProjectCards";
 
 // Images for the projects
+import universityManagement from "../../Assets/Projects/Screenshot 2025-01-07 115803.png";
 import BlogSphere from "../../Assets/Projects/BlogSphere.png";
 import PowerBuy from "../../Assets/Projects/PowerBuy.png"; 
 import Quizz from "../../Assets/Projects/Quizz.png"; 
@@ -21,6 +22,16 @@ function Projects() {
         </h1>
         <p>Here are a few projects I've worked on recently.</p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
+          
+        <Col md={6} lg={4} className="project-card">
+            <ProjectCard
+              imgPath={universityManagement}
+              title="CollegeMaster"
+              description="College Master is a scalable university management platform that streamlines workflows for students, faculty, and admins. Built with React, Redux, Express, and MongoDB, it offers a responsive interface, secure backend, and efficient data handling."
+              ghLink="https://github.com/parth-1372/CollegeMaster"
+              demoLink="https://universitymanagementsystem.vercel.app/"
+            />
+          </Col>
           
           <Col md={6} lg={4} className="project-card">
             <ProjectCard
