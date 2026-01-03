@@ -1,22 +1,9 @@
 import React from 'react';
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import About from './components/About';
-import Skills from './components/Skills';
-import Projects from './components/Projects';
-import Footer from './components/Footer';
 
 function App() {
     return (
-        <div className="min-h-screen bg-primary">
-            <Navbar />
-            <main>
-                <Hero />
-                <About />
-                <Skills />
-                <Projects />
-            </main>
-            <Footer />
+        <div className="min-h-screen bg-background text-textMain flex items-center justify-center">
+            <h1 className="text-3xl font-bold gradient-text">Portfolio Upgrade in Progress...</h1>
         </div>
     );
 }
