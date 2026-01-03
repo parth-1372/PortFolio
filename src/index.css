@@ -1,12 +1,36 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-body {
-  margin: 0;
-  font-family: "Roboto", serif !important;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-image: linear-gradient(
-    90deg,
-    hsla(153, 9%, 19%, 1) 0%,
-    hsla(153, 9%, 19%, 1) 100%
-  );
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-primary text-textMain font-sans antialiased selection:bg-accent selection:text-primary;
+  }
+}
+
+@layer utilities {
+  .glass-card {
+    @apply bg-secondary/80 backdrop-blur-sm border border-accents/10 shadow-xl;
+  }
+  
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-accent to-blue-500;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0a192f;
+}
+::-webkit-scrollbar-thumb {
+  background: #8892b0;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #64ffda;
 }
