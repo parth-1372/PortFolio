@@ -1,9 +1,16 @@
 import React from 'react';
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import About from './components/About';
 
 function App() {
     return (
-        <div className="min-h-screen bg-background text-textMain flex items-center justify-center">
-            <h1 className="text-3xl font-bold gradient-text">Portfolio Upgrade in Progress...</h1>
+        <div className="min-h-screen bg-background relative overflow-x-hidden">
+            <Navbar />
+            <main>
+                <Hero />
+                <About />
+            </main>
         </div>
     );
 }
