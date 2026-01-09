@@ -1,5 +1,5 @@
-/** @type {import('tailwindcss').Config} */
 export default {
+  darkMode: 'class',
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
@@ -7,17 +7,16 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "#09090b", // Zinc 950
-        surface: "#18181b",    // Zinc 900
-        surfaceHighlight: "#27272a", // Zinc 800
-        border: "#3f3f46",     // Zinc 700
-        textMain: "#fafafa",   // Zinc 50
-        textSub: "#a1a1aa",    // Zinc 400
-        textMuted: "#71717a",  // Zinc 500
-        primary: "#3b82f6",    // Blue 500
-        primaryDark: "#2563eb", // Blue 600
-        accent: "#8b5cf6",     // Violet 500
-        success: "#10b981",    // Emerald 500
+        background: "rgb(var(--background) / <alpha-value>)",
+        surface: "rgb(var(--surface) / <alpha-value>)",
+        surfaceHighlight: "rgb(var(--surface-highlight) / <alpha-value>)",
+        border: "rgb(var(--border) / <alpha-value>)",
+        textMain: "rgb(var(--text-main) / <alpha-value>)",
+        textSub: "rgb(var(--text-sub) / <alpha-value>)",
+        // Keep accents static for now, or variable if needed
+        primary: "#3b82f6",
+        primaryDark: "#2563eb",
+        accent: "#8b5cf6",
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
@@ -51,3 +50,4 @@ export default {
     },
     plugins: [],
   }
+}

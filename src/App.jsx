@@ -1,27 +1,24 @@
 import React from 'react';
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import About from './components/About';
-import CodingStats from './components/CodingStats';
-import Skills from './components/Skills';
-import Projects from './components/Projects';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { ThemeProvider } from './context/ThemeContext';
+import RootLayout from './layouts/RootLayout';
+import Home from './pages/Home';
+import About from './pages/About';
+import Projects from './pages/Projects';
 
 function App() {
     return (
-        <div className="min-h-screen bg-background relative overflow-x-hidden">
-            <Navbar />
-            <main>
-                <Hero />
-                <About />
-                <CodingStats />
-                <Skills />
-                <Projects />
-                <Contact />
-            </main>
-            <Footer />
-        </div>
+        <ThemeProvider>
+            <BrowserRouter>
+                <Routes>
+                    <Route path="/" element={<RootLayout />}>
+                        <Route index element={<Home />} />
+                        <Route path="about" element={<About />} />
+                        <Route path="projects" element={<Projects />} />
+                    </Route>
+                </Routes>
+            </BrowserRouter>
+        </ThemeProvider>
     );
 }
 

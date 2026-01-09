@@ -1,15 +1,24 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 @layer base {
-  body {
-    @apply bg-background text-textMain antialiased selection:bg-primary/30 selection:text-primary;
+  :root {
+    --background: 250 250 250; /* Zinc 50 */
+    --surface: 255 255 255;      /* White */
+    --surface-highlight: 244 244 245; /* Zinc 100 */
+    --text-main: 24 24 27;       /* Zinc 900 */
+    --text-sub: 82 82 91;        /* Zinc 600 */
+    --border: 228 228 231;       /* Zinc 200 */
   }
-  
-  /* Smooth scrolling */
-  html {
-    scroll-behavior: smooth;
+
+  .dark {
+    --background: 9 9 11;        /* Zinc 950 */
+    --surface: 24 24 27;         /* Zinc 900 */
+    --surface-highlight: 39 39 42; /* Zinc 800 */
+    --text-main: 250 250 250;    /* Zinc 50 */
+    --text-sub: 161 161 170;     /* Zinc 400 */
+    --border: 63 63 70;          /* Zinc 700 */
+  }
+
+  body {
+    @apply bg-[rgb(var(--background))] text-[rgb(var(--text-main))] antialiased transition-colors duration-300;
   }
 }
 

@@ -1,65 +1,70 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FiMenu, FiX } from 'react-icons/fi';
+import { FiMenu, FiX, FiSun, FiMoon } from 'react-icons/fi';
+import { useTheme } from '../context/ThemeContext';
 
 const navLinks = [
-    { name: 'About', href: '#about' },
-    { name: 'Skills', href: '#skills' },
-    { name: 'Projects', href: '#projects' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Home', href: '/' },
+    { name: 'About', href: '/about' },
+    { name: 'Projects', href: '/projects' },
 ];
 
 const Navbar = () => {
-    const [isScrolled, setIsScrolled] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
-
-    useEffect(() => {
-        const handleScroll = () => setIsScrolled(window.scrollY > 50);
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
+    const { theme, toggleTheme } = useTheme();
 
     return (
-        <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'py-4 bg-background/80 backdrop-blur-md shadow-lg' : 'py-6 bg-transparent'}`}>
-            <div className="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center">
-                <motion.a
-                    href="#"
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    className="text-2xl font-bold font-mono text-primary"
+        <nav className="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-border shadow-sm">
+            <div className="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center h-20">
+                <NavLink
+                    to="/"
+                    className="text-2xl font-bold font-mono text-primary flex items-center gap-2"
                 >
                     &lt;Parth /&gt;
-                </motion.a>
+                </NavLink>
 
                 {/* Desktop Nav */}
                 <div className="hidden md:flex gap-8 items-center">
-                    {navLinks.map((link, i) => (
-                        <motion.a
+                    {navLinks.map((link) => (
+                        <NavLink
                             key={link.name}
-                            href={link.href}
-                            initial={{ opacity: 0, y: -10 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ delay: i * 0.1 }}
-                            className="text-sm font-mono text-textSub hover:text-primary transition-colors hover:bg-white/5 px-4 py-2 rounded"
+                            to={link.href}
+                            className={({ isActive }) =>
+                                `text-sm font-medium transition-colors hover:text-primary ${isActive ? 'text-primary' : 'text-textSub'}`
+                            }
                         >
-                            <span className="text-accent mr-1">0{i + 1}.</span> {link.name}
-                        </motion.a>
+                            {link.name}
+                        </NavLink>
                     ))}
-                    <motion.a
-                        href="/resume.pdf"
-                        target="_blank"
-                        initial={{ opacity: 0, scale: 0.8 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        transition={{ delay: 0.5 }}
-                        className="px-5 py-2 border border-primary text-primary rounded hover:bg-primary/10 transition-all font-mono text-sm"
+
+                    <button
+                        onClick={toggleTheme}
+                        className="p-2 rounded-full hover:bg-surfaceHighlight transition-colors text-textMain"
                     >
-                        Resume
-                    </motion.a>
+                        {theme === 'dark' ? <FiSun className="text-xl" /> : <FiMoon className="text-xl" />}
+                    </button>
+
+                    <a
+                        href="/resume.pdf"
+                        download="Parth_Mungra_Resume.pdf"
+                        className="px-5 py-2 border border-border bg-surface hover:bg-surfaceHighlight text-textMain rounded transition-all font-mono text-xs font-semibold"
+                    >
+                        RESUME
+                    </a>
                 </div>
 
                 {/* Mobile Toggle */}
-                <div className="md:hidden text-2xl text-textMain cursor-pointer" onClick={() => setIsOpen(!isOpen)}>
-                    {isOpen ? <FiX /> : <FiMenu />}
+                <div className="md:hidden flex items-center gap-4">
+                    <button
+                        onClick={toggleTheme}
+                        className="p-2 rounded-full hover:bg-surfaceHighlight transition-colors text-textMain"
+                    >
+                        {theme === 'dark' ? <FiSun className="text-xl" /> : <FiMoon className="text-xl" />}
+                    </button>
+                    <div className="text-2xl text-textMain cursor-pointer" onClick={() => setIsOpen(!isOpen)}>
+                        {isOpen ? <FiX /> : <FiMenu />}
+                    </div>
                 </div>
             </div>
 
@@ -70,19 +75,28 @@ const Navbar = () => {
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: 'auto' }}
                         exit={{ opacity: 0, height: 0 }}
-                        className="md:hidden bg-surface border-b border-white/5 overflow-hidden"
+                        className="md:hidden bg-background border-b border-border overflow-hidden"
                     >
                         <div className="flex flex-col items-center py-8 gap-6">
                             {navLinks.map((link) => (
-                                <a
+                                <NavLink
                                     key={link.name}
-                                    href={link.href}
+                                    to={link.href}
                                     onClick={() => setIsOpen(false)}
-                                    className="text-textMain hover:text-primary font-mono"
+                                    className={({ isActive }) =>
+                                        `text-lg font-medium ${isActive ? 'text-primary' : 'text-textMain'}`
+                                    }
                                 >
                                     {link.name}
-                                </a>
+                                </NavLink>
                             ))}
+                            <a
+                                href="/resume.pdf"
+                                download
+                                className="px-5 py-2 border border-border bg-surface text-textMain rounded font-mono text-sm"
+                            >
+                                Download Resume
+                            </a>
                         </div>
                     </motion.div>
                 )}
