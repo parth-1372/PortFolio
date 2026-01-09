@@ -46,64 +46,18 @@ const TerminalMe = () => (
     </div>
 );
 
-/* Option 3: Code Aesthetics */
-const CodeSnippet = () => (
-    <div className="bg-surface border border-border rounded-3xl p-6 hover:border-primary/30 transition-colors group">
-        <div className="flex justify-between items-center mb-4">
-            <div className="bg-primary/10 p-3 rounded-xl text-primary"><FiCode size={24} /></div>
-            <span className="text-xs font-mono text-textMuted">solver.cpp</span>
-        </div>
-        <div className="font-mono text-xs text-textSub space-y-1 opacity-70 group-hover:opacity-100 transition-opacity">
-            <p><span className="text-purple-400">class</span> <span className="text-yellow-400">Solution</span> {'{'}</p>
-            <p className="pl-4"><span className="text-purple-400">void</span> <span className="text-blue-400">solve</span>(HardProblem <span className="text-red-400">p</span>) {'{'}</p>
-            <p className="pl-8 text-green-400">// Optimized approach O(n)</p>
-            <p className="pl-8"><span className="text-purple-400">return</span> <span className="text-blue-400">optimalResult</span>;</p>
-            <p className="pl-4">{'}'}</p>
-            <p>{'}'}</p>
-        </div>
-        <div className="mt-4 pt-4 border-t border-border">
-            <p className="text-textMain font-bold">Algorithms Specialist</p>
-            <p className="text-xs text-textSub">I write code that doesn't break at scale.</p>
-        </div>
-    </div>
-);
-
-/* Option 4: Status/Activity */
-const StatusCard = () => (
-    <div className="bg-surface border border-border rounded-3xl p-6 flex flex-col items-center text-center">
-        <div className="relative mb-4">
-            <div className="w-20 h-20 rounded-full overflow-hidden border-2 border-surfaceHighlight">
-                <img src="/src/assets/about.png" alt="Profile" className="w-full h-full object-cover grayscale" />
-            </div>
-            <div className="absolute bottom-1 right-1 w-5 h-5 bg-green-500 border-4 border-surface rounded-full"></div>
-        </div>
-        <h3 className="text-lg font-bold text-textMain">Parth Mungra</h3>
-        <p className="text-xs text-textSub mb-4">Pre-final @ IIIT Gwalior</p>
-        <div className="w-full bg-surfaceHighlight rounded-lg p-3 text-sm text-textMain font-mono">
-            <span className="text-green-500">● </span> Open to Work
-        </div>
-    </div>
-);
-
 const HomeRight = () => {
     return (
         <div className="space-y-8 sticky top-24">
             {/* 
-                USER: DELETE THE WIDGETS YOU DON'T WANT.
-                KEEP ONLY 2 for the best look.
+                User selected options:
              */}
 
-            {/* OPTION 1: High Value Hook */}
+            {/* 1. Value Prop */}
             <StartupHook />
 
-            {/* OPTION 2: Resume / Hiring Signal */}
-            <StatusCard />
-
-            {/* OPTION 3: Interactive Terminal */}
+            {/* 2. Interactive Terminal */}
             <TerminalMe />
-
-            {/* OPTION 4: Code Aesthetic */}
-            <CodeSnippet />
         </div>
     );
 };

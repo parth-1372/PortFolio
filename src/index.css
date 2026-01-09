@@ -4,12 +4,13 @@
 
 @layer base {
   :root {
-    --background: 250 250 250; /* Zinc 50 */
+    --background: 248 250 252;   /* Slate 50 */
     --surface: 255 255 255;      /* White */
-    --surface-highlight: 244 244 245; /* Zinc 100 */
-    --text-main: 24 24 27;       /* Zinc 900 */
-    --text-sub: 82 82 91;        /* Zinc 600 */
-    --border: 228 228 231;       /* Zinc 200 */
+    --surface-highlight: 241 245 249; /* Slate 100 */
+    --text-main: 15 23 42;       /* Slate 900 */
+    --text-sub: 71 85 105;       /* Slate 600 */
+    --border: 203 213 225;       /* Slate 300 - Darker for visibility */
+    --primary: 37 99 235;        /* Blue 600 */
   }
 
   .dark {
