@@ -1,15 +1,37 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FiGithub, FiExternalLink, FiArrowRight, FiMail, FiLinkedin } from 'react-icons/fi';
-import { SiReact, SiNodedotjs, SiMongodb, SiTypescript, SiNextdotjs, SiTailwindcss, SiDocker, SiPython } from 'react-icons/si';
+import { FiGithub, FiExternalLink, FiArrowRight, FiMail, FiLinkedin, FiCheck } from 'react-icons/fi';
 import { useNavigate } from 'react-router-dom';
 
 const HomeLeft = () => {
     const navigate = useNavigate();
 
+    const skillCategories = [
+        {
+            title: "Languages",
+            skills: ["C/C++", "Python", "Javascript", "Typescript", "Java", "Rust", "Go"]
+        },
+        {
+            title: "Frontend",
+            skills: ["ReactJS", "NextJS", "Redux", "TailwindCSS", "Framer Motion", "MaterialUI"]
+        },
+        {
+            title: "Backend",
+            skills: ["ExpressJS", "NodeJS", "Hono", "Redis", "Actix Web"]
+        },
+        {
+            title: "Database",
+            skills: ["MongoDB", "MySQL", "Redis"]
+        },
+        {
+            title: "Tools & DevOps",
+            skills: ["Git & Github", "Linux", "Firebase", "Docker", "Postman", "Kubernetes", "Grafana"]
+        }
+    ];
+
     return (
         <div className="space-y-16">
-            {/* 1. Simplified Intro */}
+            {/* 1. Intro */}
             <section className="space-y-4">
                 <h1 className="text-5xl font-bold text-textMain tracking-tight">
                     Parth Mungra
@@ -25,28 +47,41 @@ const HomeLeft = () => {
                 </p>
             </section>
 
-            {/* 2. Skills Strip (Visual) */}
-            <section>
-                <h3 className="text-sm font-bold uppercase tracking-widest text-textMuted mb-6">Technologies</h3>
-                <div className="flex flex-wrap gap-4">
-                    {[
-                        { n: "React", i: SiReact, c: "hover:text-[#61DAFB]" },
-                        { n: "Next.js", i: SiNextdotjs, c: "hover:text-textMain" },
-                        { n: "Node.js", i: SiNodedotjs, c: "hover:text-[#339933]" },
-                        { n: "TypeScript", i: SiTypescript, c: "hover:text-[#3178C6]" },
-                        { n: "MongoDB", i: SiMongodb, c: "hover:text-[#47A248]" },
-                        { n: "Docker", i: SiDocker, c: "hover:text-[#2496ED]" },
-                        { n: "Python", i: SiPython, c: "hover:text-[#3776AB]" },
-                        { n: "Tailwind", i: SiTailwindcss, c: "hover:text-[#38B2AC]" },
-                    ].map((s) => (
-                        <div key={s.n} className={`text-3xl text-textSub transition-colors duration-300 cursor-pointer ${s.c} bg-surface border border-border p-3 rounded-xl hover:border-textSub/50`}>
-                            <s.i title={s.n} />
-                        </div>
-                    ))}
+            {/* 2. Detailed Skills Matrix */}
+            <section className="bg-surface border border-border rounded-3xl p-8">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    {/* Column 1: Industries (Checklist Style) */}
+                    <div>
+                        <h3 className="font-bold text-textMain mb-4 text-lg">Industries & Skills</h3>
+                        <ul className="space-y-3">
+                            {["COMPETITIVE PROGRAMMING", "WEB DEVELOPMENT", "SYSTEMS PROGRAMMING", "DISTRIBUTED SYSTEMS"].map(item => (
+                                <li key={item} className="flex items-start gap-3 text-sm font-mono font-medium text-textSub">
+                                    <FiCheck className="text-green-500 text-lg shrink-0" />
+                                    {item}
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+
+                    {/* Column 2 & 3: Tech Pills */}
+                    <div className="md:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-8">
+                        {skillCategories.map(cat => (
+                            <div key={cat.title}>
+                                <h4 className="font-bold text-textMain mb-3">{cat.title}</h4>
+                                <div className="flex flex-wrap gap-2">
+                                    {cat.skills.map(skill => (
+                                        <span key={skill} className="bg-surfaceHighlight px-3 py-1 rounded-full text-xs font-medium text-textSub border border-border/50">
+                                            {skill}
+                                        </span>
+                                    ))}
+                                </div>
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </section>
 
-            {/* 3. Projects (Vertical Cards) */}
+            {/* 3. Projects */}
             <section className="space-y-8">
                 <div className="flex justify-between items-baseline">
                     <h2 className="text-2xl font-bold text-textMain">Featured Projects</h2>
@@ -92,21 +127,10 @@ const HomeLeft = () => {
                 </div>
             </section>
 
-            {/* Small Refs for Achievements (Idea box) */}
-            <div className="flex gap-4">
-                <div className="px-4 py-2 bg-surface border border-border rounded-lg text-xs font-mono text-textSub hover:text-primary cursor-default whitespace-nowrap">
-                    🏆 SIH 2024 Finalist
-                </div>
-                <div className="px-4 py-2 bg-surface border border-border rounded-lg text-xs font-mono text-textSub hover:text-primary cursor-default whitespace-nowrap">
-                    ⚡ CodeForces: 1450+
-                </div>
-            </div>
-
-
             <hr className="border-border" />
 
-            {/* 4. Contact / Connect */}
-            <section className="bg-surfaceHighlight/50 border border-border rounded-2xl p-8 text-center md:text-left flex flex-col md:flex-row justify-between items-center gap-6">
+            {/* 4. Contact Anchor */}
+            <section id="contact-section" className="bg-surfaceHighlight/50 border border-border rounded-2xl p-8 text-center md:text-left flex flex-col md:flex-row justify-between items-center gap-6">
                 <div>
                     <h2 className="text-2xl font-bold text-textMain mb-2">Let's Connect</h2>
                     <p className="text-textSub max-w-md">

@@ -4,12 +4,12 @@
 
 @layer base {
   :root {
-    --background: 248 250 252;   /* Slate 50 */
-    --surface: 255 255 255;      /* White */
-    --surface-highlight: 241 245 249; /* Slate 100 */
+    --background: 226 232 240;   /* Slate 200 - Much darker than white */
+    --surface: 241 245 249;      /* Slate 100 - Off-white card background */
+    --surface-highlight: 203 213 225; /* Slate 300 - Interaction state */
     --text-main: 15 23 42;       /* Slate 900 */
-    --text-sub: 71 85 105;       /* Slate 600 */
-    --border: 203 213 225;       /* Slate 300 - Darker for visibility */
+    --text-sub: 51 65 85;        /* Slate 700 */
+    --border: 148 163 184;       /* Slate 400 - Visible borders */
     --primary: 37 99 235;        /* Blue 600 */
   }
 
