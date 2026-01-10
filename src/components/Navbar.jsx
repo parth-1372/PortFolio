@@ -8,6 +8,7 @@ const navLinks = [
     { name: 'Home', href: '/' },
     { name: 'About', href: '/about' },
     { name: 'Projects', href: '/projects' },
+    { name: 'Connect With Me', href: 'mailto:your.email@example.com', isButton: true },
 ];
 
 const Navbar = () => {
@@ -27,15 +28,25 @@ const Navbar = () => {
                 {/* Desktop Nav */}
                 <div className="hidden md:flex gap-8 items-center">
                     {navLinks.map((link) => (
-                        <NavLink
-                            key={link.name}
-                            to={link.href}
-                            className={({ isActive }) =>
-                                `text-sm font-medium transition-colors hover:text-primary ${isActive ? 'text-primary' : 'text-textSub'}`
-                            }
-                        >
-                            {link.name}
-                        </NavLink>
+                        link.isButton ? (
+                            <a
+                                key={link.name}
+                                href={link.href}
+                                className="px-4 py-2 bg-primary text-white rounded-lg font-medium hover:bg-primaryDark transition-colors text-sm"
+                            >
+                                {link.name}
+                            </a>
+                        ) : (
+                            <NavLink
+                                key={link.name}
+                                to={link.href}
+                                className={({ isActive }) =>
+                                    `text-sm font-medium transition-colors hover:text-primary ${isActive ? 'text-primary' : 'text-textSub'}`
+                                }
+                            >
+                                {link.name}
+                            </NavLink>
+                        )
                     ))}
 
                     <button
