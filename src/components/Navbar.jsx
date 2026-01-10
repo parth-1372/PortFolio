@@ -32,7 +32,7 @@ const Navbar = () => {
                             <a
                                 key={link.name}
                                 href={link.href}
-                                className="px-4 py-2 bg-primary text-white rounded-lg font-medium hover:bg-primaryDark transition-colors text-sm"
+                                className="px-5 py-2 border border-primary text-primary hover:bg-primary hover:text-white rounded-full font-medium transition-all text-sm"
                             >
                                 {link.name}
                             </a>

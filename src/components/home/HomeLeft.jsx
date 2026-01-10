@@ -102,16 +102,16 @@ const HomeLeft = () => {
                     <div className="group bg-surface border border-border rounded-2xl overflow-hidden hover:border-primary/50 transition-all flex flex-col shadow-sm">
                         <div
                             className="h-48 bg-surfaceHighlight overflow-hidden relative cursor-pointer"
-                            onClick={() => window.open("https://universitymanagementsystem.vercel.app/", "_blank")}
+                            onClick={() => window.open("https://github.com/parth-1372/CollegeMaster", "_blank")}
                         >
                             <img src="/src/assets/projects/Screenshot 2025-01-07 115803.png" alt="University System" className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500" />
                         </div>
                         <div className="p-6 flex flex-col flex-grow">
                             <div className="flex justify-between items-start mb-2">
-                                <h3 className="text-xl font-bold text-textMain group-hover:text-primary transition-colors cursor-pointer" onClick={() => window.open("https://universitymanagementsystem.vercel.app/", "_blank")}>CollegeMaster</h3>
+                                <h3 className="text-xl font-bold text-textMain group-hover:text-primary transition-colors cursor-pointer" onClick={() => window.open("https://github.com/parth-1372/CollegeMaster", "_blank")}>CollegeMaster</h3>
                                 <div className="flex gap-3 text-textSub z-10">
                                     <a href="https://github.com/parth-1372/CollegeMaster" target="_blank" className="hover:text-primary p-1 bg-surfaceHighlight rounded-full"><FiGithub size={18} /></a>
-                                    <a href="https://universitymanagementsystem.vercel.app/" target="_blank" className="hover:text-primary p-1 bg-surfaceHighlight rounded-full"><FiExternalLink size={18} /></a>
+                                    {/* <a href="https://universitymanagementsystem.vercel.app/" target="_blank" className="hover:text-primary p-1 bg-surfaceHighlight rounded-full"><FiExternalLink size={18} /></a> */}
                                 </div>
                             </div>
                             <p className="text-textSub text-sm leading-relaxed mb-4 flex-grow line-clamp-3">
@@ -128,16 +128,16 @@ const HomeLeft = () => {
                     <div className="group bg-surface border border-border rounded-2xl overflow-hidden hover:border-primary/50 transition-all flex flex-col shadow-sm">
                         <div
                             className="h-48 bg-surfaceHighlight overflow-hidden relative cursor-pointer"
-                            onClick={() => window.open("http://blogsphere-env-2.eba-3csmpqj8.ap-south-1.elasticbeanstalk.com/", "_blank")}
+                            onClick={() => window.open("https://github.com/parth-1372/BlogSphere", "_blank")}
                         >
                             <img src="/src/assets/projects/BlogSphere.png" alt="BlogSphere" className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500" />
                         </div>
                         <div className="p-6 flex flex-col flex-grow">
                             <div className="flex justify-between items-start mb-2">
-                                <h3 className="text-xl font-bold text-textMain group-hover:text-primary transition-colors cursor-pointer" onClick={() => window.open("http://blogsphere-env-2.eba-3csmpqj8.ap-south-1.elasticbeanstalk.com/", "_blank")}>BlogSphere</h3>
+                                <h3 className="text-xl font-bold text-textMain group-hover:text-primary transition-colors cursor-pointer" onClick={() => window.open("https://github.com/parth-1372/BlogSphere", "_blank")}>BlogSphere</h3>
                                 <div className="flex gap-3 text-textSub z-10">
                                     <a href="https://github.com/parth-1372/BlogSphere" target="_blank" className="hover:text-primary p-1 bg-surfaceHighlight rounded-full"><FiGithub size={18} /></a>
-                                    <a href="http://blogsphere-env-2.eba-3csmpqj8.ap-south-1.elasticbeanstalk.com/" target="_blank" className="hover:text-primary p-1 bg-surfaceHighlight rounded-full"><FiExternalLink size={18} /></a>
+                                    {/* <a href="http://blogsphere-env-2.eba-3csmpqj8.ap-south-1.elasticbeanstalk.com/" target="_blank" className="hover:text-primary p-1 bg-surfaceHighlight rounded-full"><FiExternalLink size={18} /></a> */}
                                 </div>
                             </div>
                             <p className="text-textSub text-sm leading-relaxed mb-4 flex-grow line-clamp-3">

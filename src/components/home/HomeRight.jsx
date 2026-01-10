@@ -7,11 +7,11 @@ const StartupHook = () => (
         <div className="relative z-10">
             <h3 className="text-2xl font-bold mb-4">Why hire me?</h3>
             <ul className="space-y-3 mb-6 font-medium opacity-90 text-sm">
-                <li className="flex gap-2 items-center"><FiZap /> I ship MVPs fast.</li>
+                <li className="flex gap-2 items-center"><FiZap /> Fast Learner</li>
                 <li className="flex gap-2 items-center"><FiCode /> Clean, maintainable code.</li>
-                <li className="flex gap-2 items-center"><FiClock /> Timezone aligned (IST).</li>
+                <li className="flex gap-2 items-center"><FiClock /> Remote Available</li>
             </ul>
-            <a href="mailto:your@email.com" className="inline-block bg-white text-primary px-6 py-3 rounded-lg font-bold hover:bg-opacity-90 transition-opacity w-full text-center">
+            <a href="mailto:parthmungra.13@gmail.com" className="inline-block bg-white text-primary px-6 py-3 rounded-lg font-bold hover:bg-opacity-90 transition-opacity w-full text-center">
                 Let's Build Together
             </a>
         </div>
@@ -33,9 +33,9 @@ const TerminalMe = () => (
                 <span className="text-blue-400">➜</span> <span className="text-purple-400">~</span> <span className="text-yellow-400">npm</span> start
             </div>
             <div className="text-gray-300">
-                > starting dev server...<br />
-                > compilation success (142ms)<br />
-                > status: <span className="text-green-300">READY_TO_HIRE</span>
+                &gt; starting dev server...<br />
+                &gt; compilation success (142ms)<br />
+                &gt; status: <span className="text-green-300">READY_TO_HIRE</span>
             </div>
             <div className="animate-pulse">
                 <span className="text-blue-400">➜</span> <span className="text-purple-400">~</span> <span className="w-2 h-4 bg-gray-400 inline-block align-middle ml-1"></span>
@@ -50,15 +50,18 @@ const ConnectWidget = () => (
         <h3 className="font-bold text-textMain mb-4">Let's Connect</h3>
         <p className="text-sm text-textSub mb-6">Open for opportunities.</p>
         <div className="flex gap-2 justify-between">
-            <a href="mailto:your.email@example.com" className="flex-1 p-3 bg-surfaceHighlight rounded-xl flex justify-center items-center text-textMain hover:bg-primary hover:text-white transition-all">
+            <a href="mailto:parthmungra.13@gmail.com" className="flex-1 p-3 bg-surfaceHighlight rounded-xl flex justify-center items-center text-textMain hover:bg-primary hover:text-white transition-all">
                 <FiMail size={20} />
             </a>
-            <a href="https://linkedin.com" target="_blank" className="flex-1 p-3 bg-surfaceHighlight rounded-xl flex justify-center items-center text-textMain hover:bg-primary hover:text-white transition-all">
+            <a href="https://www.linkedin.com/in/parth-mungra/" target="_blank" className="flex-1 p-3 bg-surfaceHighlight rounded-xl flex justify-center items-center text-textMain hover:bg-primary hover:text-white transition-all">
                 <FiLinkedin size={20} />
             </a>
             <a href="https://github.com/parth-1372" target="_blank" className="flex-1 p-3 bg-surfaceHighlight rounded-xl flex justify-center items-center text-textMain hover:bg-primary hover:text-white transition-all">
                 <FiGithub size={20} />
             </a>
+        </div>
+        <div className="mt-4 text-xs text-textSub text-center border-t border-border pt-2">
+            +91-9510814633
         </div>
     </div>
 );

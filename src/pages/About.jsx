@@ -63,6 +63,7 @@ const About = () => {
                             </div>
                             <span className="font-mono text-sm text-primary bg-primary/10 px-3 py-1 rounded-full">2022 - 2027</span>
                         </div>
+                        <p className="text-textMuted mt-2 text-sm">CGPA: 9.00/10</p>
                         <p className="text-textMuted mt-4 text-sm"><strong className="text-textMain">Coursework:</strong> Data Structures, Algorithms, Operating Systems, DBMS, Computer Networks, Distributed Systems.</p>
                     </div>
 
