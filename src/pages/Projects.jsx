@@ -7,21 +7,21 @@ const projects = [
         title: "CollegeMaster",
         desc: "Comprehensive university management platform automating administrative tasks.",
         stack: ["React", "Node", "Mongo"],
-        img: "/assets/projects/Screenshot 2025-01-07 115803.png",
+        img: "/assets/Projects/Screenshot 2025-01-07 115803.png",
         links: { git: "https://github.com/parth-1372/CollegeMaster", demo: "https://universitymanagementsystem.vercel.app/" }
     },
     {
         title: "BlogSphere",
         desc: "Dynamic blogging ecosystem with markdown support and auth.",
         stack: ["Node", "Express", "EJS"],
-        img: "/assets/projects/BlogSphere.png",
+        img: "/assets/Projects/BlogSphere.png",
         links: { git: "https://github.com/parth-1372/BlogSphere", demo: "http://blogsphere-env-2.eba-3csmpqj8.ap-south-1.elasticbeanstalk.com/" }
     },
     {
         title: "PowerBuy",
         desc: "Modern E-commerce solution with cart and checkout simulation.",
         stack: ["React", "Tailwind", "Vite"],
-        img: "/assets/projects/PowerBuy.png",
+        img: "/assets/Projects/PowerBuy.png",
         links: { git: "https://github.com/parth-1372/E-Commerce", demo: "https://e-commerce-seven-rose-24.vercel.app/" }
     }
 ];
