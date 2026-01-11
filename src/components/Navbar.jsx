@@ -7,8 +7,11 @@ import { useTheme } from '../context/ThemeContext';
 const navLinks = [
     { name: 'Home', href: '/' },
     { name: 'About', href: '/about' },
-    { name: 'Projects', href: '/projects' },
-    { name: 'Connect With Me', href: 'mailto:your.email@example.com', isButton: true },
+    { name: 'Projects', href: '/projects' },{
+  name: 'Connect With Me',
+  href: 'https://mail.google.com/mail/?view=cm&fs=1&to=parthmungra.13@gmail.com',
+  isButton: true
+},
 ];
 
 const Navbar = () => {
@@ -57,7 +60,7 @@ const Navbar = () => {
                     </button>
 
                     <a
-                        href="/resume.pdf"
+                        href="/assets/resume.pdf"
                         download="Parth_Mungra_Resume.pdf"
                         className="px-5 py-2 border border-border bg-surface hover:bg-surfaceHighlight text-textMain rounded transition-all font-mono text-xs font-semibold"
                     >
@@ -102,7 +105,7 @@ const Navbar = () => {
                                 </NavLink>
                             ))}
                             <a
-                                href="/resume.pdf"
+                                href="/assets/resume.pdf"
                                 download
                                 className="px-5 py-2 border border-border bg-surface text-textMain rounded font-mono text-sm"
                             >

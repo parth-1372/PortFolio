@@ -104,7 +104,7 @@ const HomeLeft = () => {
                             className="h-48 bg-surfaceHighlight overflow-hidden relative cursor-pointer"
                             onClick={() => window.open("https://github.com/parth-1372/CollegeMaster", "_blank")}
                         >
-                            <img src="/src/assets/projects/Screenshot 2025-01-07 115803.png" alt="University System" className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500" />
+                            <img src="/public/assets/projects/Screenshot 2025-01-07 115803.png" alt="University System" className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500" />
                         </div>
                         <div className="p-6 flex flex-col flex-grow">
                             <div className="flex justify-between items-start mb-2">
@@ -130,7 +130,7 @@ const HomeLeft = () => {
                             className="h-48 bg-surfaceHighlight overflow-hidden relative cursor-pointer"
                             onClick={() => window.open("https://github.com/parth-1372/BlogSphere", "_blank")}
                         >
-                            <img src="/src/assets/projects/BlogSphere.png" alt="BlogSphere" className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500" />
+                            <img src="/public/assets/projects/BlogSphere.png" alt="BlogSphere" className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500" />
                         </div>
                         <div className="p-6 flex flex-col flex-grow">
                             <div className="flex justify-between items-start mb-2">
