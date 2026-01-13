@@ -1,8 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-
+import img from '../assets/about.png'
 const About = () => {
-     img: "/assets/about.png"
     return (
         <section id="about" className="section-padding">
             <motion.div
