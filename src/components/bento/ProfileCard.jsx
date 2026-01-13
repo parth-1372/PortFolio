@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { FiMapPin, FiGithub, FiTwitter, FiLinkedin } from 'react-icons/fi';
 
 const ProfileCard = () => {
+    img = "/assets/about.png"
     return (
         <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
@@ -11,7 +12,7 @@ const ProfileCard = () => {
         >
             <div className="z-10">
                 <div className="w-20 h-20 rounded-full overflow-hidden border-2 border-primary mb-6">
-                    <img src="/assets/about.png" alt="Profile" className="w-full h-full object-cover" />
+                    <img src= {img} alt="Profile" className="w-full h-full object-cover" />
                 </div>
 
                 <h2 className="text-3xl font-bold text-textMain mb-2">Parth Mungra</h2>

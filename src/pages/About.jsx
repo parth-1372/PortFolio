@@ -14,7 +14,7 @@ const About = () => {
                 className="flex flex-col md:flex-row gap-10 items-center border-b border-border/50 pb-12"
             >
                 <div className="w-40 h-40 rounded-full overflow-hidden border-4 border-surfaceHighlight shrink-0 shadow-xl">
-                    <img src="/public/assets/about.png" alt="Parth Mungra" className="w-full h-full object-cover" />
+                    <img src="/assets/about.png" alt="Parth Mungra" className="w-full h-full object-cover" />
                 </div>
                 <div>
                     <h1 className="text-4xl md:text-5xl font-bold text-textMain mb-4">Parth Mungra</h1>
