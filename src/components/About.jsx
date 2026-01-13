@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const About = () => {
+     img: "/assets/about.png"
     return (
         <section id="about" className="section-padding">
             <motion.div
@@ -42,7 +43,7 @@ const About = () => {
                     <div className="absolute inset-0 bg-accent rounded-lg translate-x-3 translate-y-3 group-hover:translate-x-2 group-hover:translate-y-2 transition-transform duration-300"></div>
                     <div className="relative rounded-lg overflow-hidden border-2 border-surface bg-surfaceHighlight z-10 w-full aspect-square">
                         <img
-                            src="/assets/about.png"
+                            src= {img}
                             alt="Parth Mungra"
                             className="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-300"
                         />
