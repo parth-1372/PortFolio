@@ -4,25 +4,25 @@ import { FiGithub, FiExternalLink } from 'react-icons/fi';
 
 const projects = [
     {
-        title: "CollegeMaster",
-        desc: "Comprehensive university management platform automating administrative tasks.",
-        stack: ["React", "Node", "Mongo"],
-        img: "/assets/Projects/Screenshot 2025-01-07 115803.png",
-        links: { git: "https://github.com/parth-1372/CollegeMaster", demo: "https://universitymanagementsystem.vercel.app/" }
+        title: "EdgeWatch",
+        desc: "Centralized monitoring system that avoids single point of failure using a custom Gossip Protocol and Value-of-Information filter.",
+        stack: ["React", "Python", "Socket.IO", "Docker"],
+        img: "/assets/Projects/edgewatch.png",
+        links: { git: "https://github.com/parth-1372/EdgeWatch", demo: "" }
     },
     {
-        title: "BlogSphere",
-        desc: "Dynamic blogging ecosystem with markdown support and auth.",
-        stack: ["Node", "Express", "EJS"],
-        img: "/assets/Projects/BlogSphere.png",
-        links: { git: "https://github.com/parth-1372/BlogSphere", demo: "http://blogsphere-env-2.eba-3csmpqj8.ap-south-1.elasticbeanstalk.com/" }
+        title: "TexFlow",
+        desc: "Cloud-based LaTeX Resume Engine with a built-in Job Tracker, auto-sync to Drive/Github, and background compilation using Tectonic.",
+        stack: ["React", "Go", "PostgreSQL", "Redis", "MinIO"],
+        img: "/assets/Projects/texxflow.png",
+        links: { git: "https://github.com/parth-1372/texflow-resumes", demo: "https://texxflow.vercel.app/" }
     },
     {
-        title: "PowerBuy",
-        desc: "Modern E-commerce solution with cart and checkout simulation.",
-        stack: ["React", "Tailwind", "Vite"],
-        img: "/assets/Projects/PowerBuy.png",
-        links: { git: "https://github.com/parth-1372/E-Commerce", demo: "https://e-commerce-seven-rose-24.vercel.app/" }
+        title: "Rokadiya Enterprise",
+        desc: "AI-driven compliance portal parsing policy PDFs via Gemini and delivering expiry alerts via Firebase Cloud Messaging.",
+        stack: ["Next.js", "Firebase", "Gemini AI"],
+        img: "/assets/Projects/rokadiya.png",
+        links: { git: "", demo: "" }
     }
 ];
 

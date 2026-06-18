@@ -4,27 +4,27 @@ import { FiGithub, FiExternalLink, FiFolder } from 'react-icons/fi';
 
 const projects = [
     {
-        title: "CollegeMaster",
-        description: "A comprehensive university management platform that automates administrative tasks and streamlines communication between students and faculty. Features role-based access control and real-time updates.",
-        tech: ["React", "Node.js", "MongoDB", "Redux"],
-        github: "https://github.com/parth-1372/CollegeMaster",
-        demo: "https://universitymanagementsystem.vercel.app/",
+        title: "EdgeWatch",
+        description: "A decentralized monitoring mesh engineered with a pull-push Gossip Protocol and a Value-of-Information (VoI) filter to dramatically reduce telemetry network bandwidth overhead by up to 100x.",
+        tech: ["React", "Python", "Flask", "Socket.IO", "Docker", "SQLite"],
+        github: "https://github.com/parth-1372/EdgeWatch",
+        demo: "",
         featured: true
     },
     {
-        title: "BlogSphere",
-        description: "A dynamic blogging ecosystem supporting user authentication, markdown content creation, and real-time updates. Optimized for SEO and performance.",
-        tech: ["Node.js", "Express", "MongoDB", "EJS"],
-        github: "https://github.com/parth-1372/BlogSphere",
-        demo: "http://blogsphere-env-2.eba-3csmpqj8.ap-south-1.elasticbeanstalk.com/",
+        title: "TexFlow",
+        description: "Cloud-based LaTeX Resume Engine and Job Tracker. Offloads CPU-intensive PDF compilation to asynchronous Go/Redis background workers, while syncing ATS-friendly PDFs to Google Drive.",
+        tech: ["React", "Go", "PostgreSQL", "Redis", "MinIO"],
+        github: "https://github.com/parth-1372/texflow-resumes",
+        demo: "https://texxflow.vercel.app/",
         featured: true
     },
     {
-        title: "PowerBuy",
-        description: "Modern E-commerce solution featuring intuitive product discovery, secure checkout simulation, and a highly responsive mobile-first design.",
-        tech: ["Vite", "React", "Tailwind", "JavaScript"],
-        github: "https://github.com/parth-1372/E-Commerce",
-        demo: "https://e-commerce-seven-rose-24.vercel.app/",
+        title: "Rokadiya Enterprise",
+        description: "AI-driven compliance portal tracking commercial vehicle insurance policies. Features Gemini 1.5 multimodal parsing to extract text from PDFs, pushing automated renewal alerts via FCM.",
+        tech: ["Next.js", "Firebase", "Gemini AI", "Tailwind"],
+        github: "",
+        demo: "",
         featured: false
     }
 ];

@@ -1,0 +1,96 @@
+You are a senior staff engineer and technical interviewer. Your task is to analyze my project's codebase, architecture, and deployment setup to generate a highly detailed `PROJECT_INTERVIEW_CONTEXT.md` file. 
+
+This file will serve as my ultimate study guide and cheat sheet for technical interviews. It must be exhaustive, technical, and leave no stone unturned. Do not use generic placeholders; read the files, understand the real logic, and write concrete details.
+
+### How to analyze this project:
+1. Read the core server files, router setup, and database schemas.
+2. Read the main frontend components, layout, API integration layer, and state management.
+3. Check configuration files (e.g., package.json, go.mod, Cargo.toml, Dockerfile, vercel.json, render.yaml, fly.toml, GitHub actions, etc.) to understand the exact tech stack, dependencies, and deployment strategy.
+4. Search the code or Git history (if available) for how major features, authentication, queues, and pipelines are implemented.
+
+Once you have analyzed the codebase, write the `PROJECT_INTERVIEW_CONTEXT.md` file following this exact 15-section structure:
+
+---
+
+# [Project Name] Interview Context
+
+## 1. Executive Summary
+- **What problem does the project solve?** (Describe the target pain point and why it is a manual headache for users.)
+- **Who is the target user?** (Identify the exact audience.)
+- **Why was it built?** (The core business or personal driver behind the project.)
+- **What makes it different from existing solutions?** (List 3-4 specific features or workflow integrations that set it apart from generic competitors.)
+
+## 2. Project Story
+- **Origin of the idea & Motivation:** (How did the idea start?)
+- **Real-world problem being solved:** (The specific inefficiencies of current alternatives.)
+- **Alternative approaches considered:** (List 2-3 design alternatives considered—e.g., CLI vs Web App, Serverless vs Stateful, WASM in-browser vs Backend—and explain why they were rejected.)
+- **Why the final architecture was chosen:** (Provide the technical justification for the current architectural split—e.g., decoupling API from long-running worker tasks.)
+
+## 3. High-Level Architecture
+- **Complete Architecture Diagram:** (Provide a clean text-based ASCII flow diagram illustrating how clients, CDN, API Gateway, Database, Storage, Cache, and Workers interact.)
+- **Responsibility Breakdown:** Bulleted list explaining exactly what the Frontend, Backend, Database, Queue, and Storage layers are responsible for.
+- **Key Flows (Step-by-Step):** Detailed step-by-step descriptions of:
+  - **Authentication Flow**
+  - **Core Business Pipeline Flow** (e.g., compile flow, processing flow, ingestion flow)
+  - **Data Sync/Versioning Flow**
+
+## 4. Complete Tech Stack
+For each tier (Frontend, Backend, Database, Cache/Queue, Storage, External Engines/Libraries):
+- Identify the exact technology used.
+- **Why:** The specific reason it was chosen for this project.
+- **Alternatives:** What else could have been used.
+- **Tradeoffs/Benefits:** What you gained (e.g., low memory footprint, speed) and what you sacrificed (e.g., SSR SEO optimization, stateful persistence).
+
+## 5. Feature Breakdown
+For the top 3-4 major features of the application, detail:
+- **What it does:** The user-facing explanation.
+- **Internals:** The exact sequence of API calls, database updates, background worker jobs, pub/sub messages, or third-party SDK calls that make it happen.
+- **Edge cases:** The trickiest failure modes (e.g., infinite loops, network drops, rate limits) and how they are handled in code (timeouts, contexts, transaction retries).
+
+## 6. Database Design
+- **Entity Schema:** List the main database tables, their primary keys, foreign keys, and unique constraints.
+- **Relationships:** Explain how the tables relate (e.g., 1-to-many, many-to-many) and why this relational structure (or NoSQL structure) fits the business logic.
+- **Design Safeguards:** Explain features like cascading deletes, database constraints, or indexes built for query performance.
+
+## 7. Authentication Deep Dive
+- Detail the exact authentication protocol (JWT, OAuth2, session cookies, etc.).
+- Trace the step-by-step authorization code/token flow.
+- **The Cross-Domain & Security Issues:** Highlight any modern browser issues faced (e.g., cross-domain third-party cookie blocking, CORS pre-flights) and the exact technical solution implemented (such as proxying, reverse proxies, or a temporary code exchange endpoint).
+
+## 8. Core Business/Processing Pipeline
+- Provide a detailed trace of the system's core processing engine.
+- Trace the lifecycle of a payload/job from upload, schema validation, ingestion into a queue, worker retrieval, file sanitization/processing, containerized engine execution, logging, storage upload, and SSE/WebSocket real-time client streaming.
+
+## 9. Version Control / Storage Model
+- Explain how data snapshots, file versioning, or state history are managed.
+- Detail the architectural trade-offs: Why a certain storage model (e.g., folder-prefix snapshotting on Object Storage vs database records vs bare Git repos) was chosen and why it scales better.
+
+## 10. Infrastructure & Deployment
+- Where is each service hosted (e.g., Vercel, Render, Fly.io, Supabase, Cloudflare, Upstash)?
+- How are they deployed (e.g., Dockerfiles, serverless routes, Edge proxies)?
+- How is configuration (e.g., rewrites, routing, environment variables) managed?
+
+## 11. Major Problems Faced During Development
+List the 3 most complex, hair-pulling bugs or architectural issues faced during development. For each, describe:
+- **Symptoms:** What went wrong and how it was noticed (logs, UI freeze, failed tests).
+- **Root Cause:** The underlying technical reason (e.g., aborted HTTP contexts, CSP headers blocking CDNs, legacy engine primitives crashing compiler).
+- **Final Fix:** The exact code changes or configuration updates implemented to resolve it forever.
+
+## 12. Security Considerations
+- List the threat models addressed (e.g., Path Traversal on file uploads, Remote Code Execution (RCE) via user inputs, SQL injection, tenant isolation validation, CSRF/XSS).
+- Explain the exact security measures implemented (sanitization functions, restricted engine execution modes, middleware checks, HttpOnly/Secure cookie settings).
+
+## 13. Performance Considerations
+- Detail the optimizations implemented to make the app fast and cost-effective.
+- Explain things like: Using queues to prevent API thread starvation, choosing minimal docker images over full system suites, connection pooling (`pgxpool`, etc.), and CDNs or proxy setups that cut down CORS pre-flights.
+
+## 14. Design Decisions
+Select 3 critical design choices (e.g., API Gateway vs Monolith, Top Navbar vs Sidebar horizontal space conservation, proxying backend requests to avoid pre-flights) and provide:
+- The decision.
+- **Why:** The concrete user experience (UX) or system design justification.
+
+## 15. Resume Talking Points
+Provide copy-pasteable script templates for how to explain this project to a hiring manager:
+- **30-Second Elevator Pitch** (focused on high-level business problem + basic architecture)
+- **1-Minute Explanation** (deeper dive into pipeline, queues, and worker communication)
+- **2-Minute Explanation** (comprehensive architectural explanation including security isolation, DB locking, and third-party API integration)

@@ -102,24 +102,25 @@ const HomeLeft = () => {
                     <div className="group bg-surface border border-border rounded-2xl overflow-hidden hover:border-primary/50 transition-all flex flex-col shadow-sm">
                         <div
                             className="h-48 bg-surfaceHighlight overflow-hidden relative cursor-pointer"
-                            onClick={() => window.open("https://github.com/parth-1372/CollegeMaster", "_blank")}
+                            onClick={() => window.open("https://github.com/parth-1372/EdgeWatch", "_blank")}
                         >
-                            <img src="/assets/Projects/Screenshot 2025-01-07 115803.png" alt="University System" className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500" />
+                            <img src="/assets/Projects/edgewatch.png" alt="EdgeWatch" className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500" />
                         </div>
                         <div className="p-6 flex flex-col flex-grow">
                             <div className="flex justify-between items-start mb-2">
-                                <h3 className="text-xl font-bold text-textMain group-hover:text-primary transition-colors cursor-pointer" onClick={() => window.open("https://github.com/parth-1372/CollegeMaster", "_blank")}>CollegeMaster</h3>
+                                <h3 className="text-xl font-bold text-textMain group-hover:text-primary transition-colors cursor-pointer" onClick={() => window.open("https://github.com/parth-1372/EdgeWatch", "_blank")}>EdgeWatch</h3>
                                 <div className="flex gap-3 text-textSub z-10">
-                                    <a href="https://github.com/parth-1372/CollegeMaster" target="_blank" className="hover:text-primary p-1 bg-surfaceHighlight rounded-full"><FiGithub size={18} /></a>
-                                    {/* <a href="https://universitymanagementsystem.vercel.app/" target="_blank" className="hover:text-primary p-1 bg-surfaceHighlight rounded-full"><FiExternalLink size={18} /></a> */}
+                                    <a href="https://github.com/parth-1372/EdgeWatch" target="_blank" className="hover:text-primary p-1 bg-surfaceHighlight rounded-full"><FiGithub size={18} /></a>
                                 </div>
                             </div>
                             <p className="text-textSub text-sm leading-relaxed mb-4 flex-grow line-clamp-3">
-                                Unified university management portal. Handles student data, attendance, and faculty modules.
+                                Decentralized monitoring mesh using a custom Gossip Protocol and Value-of-Information filtering to minimize edge bandwidth by up to 100x.
                             </p>
-                            <div className="flex gap-2 text-xs font-mono text-textMuted mt-auto">
-                                <span className="bg-surfaceHighlight px-2 py-1 rounded">MERN</span>
-                                <span className="bg-surfaceHighlight px-2 py-1 rounded">Redux</span>
+                            <div className="flex gap-2 text-xs font-mono text-textMuted mt-auto flex-wrap">
+                                <span className="bg-surfaceHighlight px-2 py-1 rounded">React</span>
+                                <span className="bg-surfaceHighlight px-2 py-1 rounded">Python</span>
+                                <span className="bg-surfaceHighlight px-2 py-1 rounded">Node.js</span>
+                                <span className="bg-surfaceHighlight px-2 py-1 rounded">Docker</span>
                             </div>
                         </div>
                     </div>
@@ -128,24 +129,26 @@ const HomeLeft = () => {
                     <div className="group bg-surface border border-border rounded-2xl overflow-hidden hover:border-primary/50 transition-all flex flex-col shadow-sm">
                         <div
                             className="h-48 bg-surfaceHighlight overflow-hidden relative cursor-pointer"
-                            onClick={() => window.open("https://github.com/parth-1372/BlogSphere", "_blank")}
+                            onClick={() => window.open("https://texxflow.vercel.app/", "_blank")}
                         >
-                            <img src="/assets/Projects/BlogSphere.png" alt="BlogSphere" className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500" />
+                            <img src="/assets/Projects/texxflow.png" alt="TexFlow" className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500" />
                         </div>
                         <div className="p-6 flex flex-col flex-grow">
                             <div className="flex justify-between items-start mb-2">
-                                <h3 className="text-xl font-bold text-textMain group-hover:text-primary transition-colors cursor-pointer" onClick={() => window.open("https://github.com/parth-1372/BlogSphere", "_blank")}>BlogSphere</h3>
+                                <h3 className="text-xl font-bold text-textMain group-hover:text-primary transition-colors cursor-pointer" onClick={() => window.open("https://texxflow.vercel.app/", "_blank")}>TexFlow</h3>
                                 <div className="flex gap-3 text-textSub z-10">
-                                    <a href="https://github.com/parth-1372/BlogSphere" target="_blank" className="hover:text-primary p-1 bg-surfaceHighlight rounded-full"><FiGithub size={18} /></a>
-                                    {/* <a href="http://blogsphere-env-2.eba-3csmpqj8.ap-south-1.elasticbeanstalk.com/" target="_blank" className="hover:text-primary p-1 bg-surfaceHighlight rounded-full"><FiExternalLink size={18} /></a> */}
+                                    <a href="https://github.com/parth-1372/texflow-resumes" target="_blank" className="hover:text-primary p-1 bg-surfaceHighlight rounded-full"><FiGithub size={18} /></a>
+                                    <a href="https://texxflow.vercel.app/" target="_blank" className="hover:text-primary p-1 bg-surfaceHighlight rounded-full"><FiExternalLink size={18} /></a>
                                 </div>
                             </div>
                             <p className="text-textSub text-sm leading-relaxed mb-4 flex-grow line-clamp-3">
-                                Dynamic blogging platform with markdown support, authentication, and real-time updates.
+                                Cloud-based LaTeX Resume Engine with job application tracking, Redis background compilation workers, and Google Drive auto-sync.
                             </p>
-                            <div className="flex gap-2 text-xs font-mono text-textMuted mt-auto">
-                                <span className="bg-surfaceHighlight px-2 py-1 rounded">Node.js</span>
-                                <span className="bg-surfaceHighlight px-2 py-1 rounded">EJS</span>
+                            <div className="flex gap-2 text-xs font-mono text-textMuted mt-auto flex-wrap">
+                                <span className="bg-surfaceHighlight px-2 py-1 rounded">React</span>
+                                <span className="bg-surfaceHighlight px-2 py-1 rounded">Go</span>
+                                <span className="bg-surfaceHighlight px-2 py-1 rounded">Redis</span>
+                                <span className="bg-surfaceHighlight px-2 py-1 rounded">PostgreSQL</span>
                             </div>
                         </div>
                     </div>
